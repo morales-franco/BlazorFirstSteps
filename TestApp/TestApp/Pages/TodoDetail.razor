@@ -1,0 +1,14 @@
+﻿<div class="card">
+
+    <h3>TodoDetail</h3>
+
+    <span>@Todo.Title</span>
+    <span>@Todo.IsDone</span>
+</div>
+
+
+@code {
+    [Parameter]
+    public TodoVM Todo { get; set; }
+
+}

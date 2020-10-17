@@ -1,0 +1,26 @@
+﻿@*<div class="alert alert-success fade show" role="alert">
+        <strong>Hello, world!</strong>
+        <p class="card-text">
+            <h1>Welcome to your new app.</h1>
+        </p>
+    </div>
+
+    @code {
+
+    }*@
+
+@*Step 2 Fragments*@
+<div class="alert alert-success fade show" role="alert">
+    <strong>@Title</strong>
+    <p class="card-text">
+        @ChildContent
+    </p>
+</div>
+
+@code {
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    public string Title { get; set; }
+}

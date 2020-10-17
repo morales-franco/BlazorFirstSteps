@@ -1,0 +1,50 @@
+﻿@page "/calculator"
+
+<Message Title="Calculator">
+    <h1>Lets go!</h1>
+    <small>Enjoy!</small>
+</Message>
+
+<div>
+    <input type="number" @bind-value="@NumberA" @onkeypress="onKeyPressHandler" />
+    +
+    <input type="number" @bind-value="@NumberB" />
+
+    <button @onclick="Calculate">Calculate</button>
+
+
+    @if (Result != null)
+    {
+        <div>
+            <h3 class="@ResultColor">Result @Result</h3>
+
+        </div>
+    }
+
+
+
+</div>
+
+
+@code {
+    public int? NumberA { get; set; }
+    public int? NumberB { get; set; }
+    public int? Result { get; set; }
+
+
+    void Calculate()
+    {
+        Result = NumberA + NumberB;
+    }
+
+
+    private bool changeColor = true;
+
+    private string ResultColor => changeColor ? "bg-danger" : "bg-primary";
+
+    private void onKeyPressHandler()
+    {
+        changeColor = !changeColor;
+    }
+
+}

@@ -3,3 +3,6 @@
 ################################################################################
 
 /TestApp/.vs/TestApp/config
+/TestApp/.vs/TestApp/v16
+/TestApp/TestApp/bin/Debug/netcoreapp3.1
+/TestApp/TestApp/obj
